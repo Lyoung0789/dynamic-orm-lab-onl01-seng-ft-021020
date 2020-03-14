@@ -71,8 +71,6 @@ class InteractiveRecord
       WHERE #{attribute.keys.join} = "#{attribute.values.join}"
     SQL
     
-  
-  
     DB[:conn].execute(sql)
     
     
