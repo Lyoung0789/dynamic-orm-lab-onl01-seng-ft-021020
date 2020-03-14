@@ -70,7 +70,7 @@ class InteractiveRecord
   
     
     attribute.each do |key, value|
-      keys = key.to_s
+      keys = key
       values = value
     end 
     
