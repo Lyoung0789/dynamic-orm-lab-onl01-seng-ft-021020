@@ -72,7 +72,7 @@ class InteractiveRecord
     SQL
     
     keys = attribute.keys.join
-    values = attribute.values
+    values = attribute.values.join
     
     binding.pry
   
