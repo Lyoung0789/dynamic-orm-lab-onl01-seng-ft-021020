@@ -79,7 +79,7 @@ class InteractiveRecord
       WHERE #{keys}=#{values}
     SQL
     
-    binding.pry
+    
     DB[:conn].execute(sql)
     
     
