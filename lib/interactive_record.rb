@@ -68,7 +68,7 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE ? = ?
+      WHERE #{attribute.keys = ?
     SQL
     
     keys = attribute.keys.join
