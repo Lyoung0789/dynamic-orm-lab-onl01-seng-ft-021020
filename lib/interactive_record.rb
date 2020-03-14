@@ -65,11 +65,17 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
+    keys = ""
+    values =""
     sql= <<-SQL
       SELECT * from #{self.table_name}
       WHERE ? = ?
     SQL
     
+    attribute.each do |key, value|
+      keys = key 
+      values = value
+    end 
     binding.pry 
     
   end 
