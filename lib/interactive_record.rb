@@ -51,7 +51,7 @@ class InteractiveRecord
     
     DB[:conn].execute(sql)
     
-    binding.pry 
+    
   end 
   
   
