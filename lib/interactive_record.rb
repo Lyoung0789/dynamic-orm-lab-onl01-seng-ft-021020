@@ -69,7 +69,7 @@ class InteractiveRecord
     values =""
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE ? = ?
+      WHERE ?=?
     SQL
     
     attribute.each do |key, value|
