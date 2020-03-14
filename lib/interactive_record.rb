@@ -76,7 +76,8 @@ class InteractiveRecord
       keys = key.to_s
       values = value
     end 
-    binding.pry 
+    DB[:conn].execute(sql, keys, value)
+    
     
   end 
   
