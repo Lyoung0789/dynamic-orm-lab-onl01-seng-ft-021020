@@ -73,7 +73,7 @@ class InteractiveRecord
     
     # binding.pry 
   
-    DB[:conn].execute(sql, #{attribute.keys}.flatten, #{attribute.values}.flatten)
+    DB[:conn].execute(sql, attribute.keys.flatten, attribute.values.flatten)
     
     
   end 
