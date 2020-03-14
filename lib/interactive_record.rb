@@ -74,7 +74,7 @@ class InteractiveRecord
     keys = attribute.keys.join
     values = attribute.values
     
-    # binding.pry
+    binding.pry
   
     DB[:conn].execute(sql, keys, values)
     
