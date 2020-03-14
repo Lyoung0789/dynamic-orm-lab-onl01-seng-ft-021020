@@ -72,7 +72,7 @@ class InteractiveRecord
     SQL
     
     
-   binding.pry
+  
   
     DB[:conn].execute(sql, attribute.keys.join(), attribute.values)
     
