@@ -68,7 +68,7 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE #{attribute.keys} = #{attribute.values} 
+      WHERE #{attribute.keys}.flatten = #{attribute.values} 
     SQL
     
     binding.pry 
