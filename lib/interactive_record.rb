@@ -56,7 +56,7 @@ class InteractiveRecord
   
   def self.find_by_name(name)
     sql=<<-SQL
-      SELECT * from #{table_name_for_insert}
+      SELECT * from #{self.table_name}
       WHERE name = ?
     SQL
     
