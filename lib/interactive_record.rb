@@ -76,7 +76,7 @@ class InteractiveRecord
       keys = key.to_s
       values = value
     end 
-    DB[:conn].execute(sql, keys, value)
+    DB[:conn].execute(sql, keys, values)
     
     
   end 
