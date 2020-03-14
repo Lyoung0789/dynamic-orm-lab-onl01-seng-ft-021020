@@ -79,6 +79,7 @@ class InteractiveRecord
       WHERE #{self.table_name}.#{keys} = #{values} 
     SQL
     
+    binding.pry 
   
     DB[:conn].execute(sql)
     
