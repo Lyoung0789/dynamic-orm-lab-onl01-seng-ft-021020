@@ -68,13 +68,13 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE ? = ?
+      WHERE ? = "?"
     SQL
     
     keys = attribute.keys.join
     values = attribute.values.join
     
-    binding.pry
+    # binding.pry
   
     DB[:conn].execute(sql, keys, values)
     
