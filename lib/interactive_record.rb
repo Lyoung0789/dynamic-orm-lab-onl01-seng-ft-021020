@@ -22,7 +22,7 @@ class InteractiveRecord
   def initialize(options ={})
     options.each do |key, value|
       self.send("#{key}=", value)
-      binding.pry 
+      # binding.pry 
     end 
     # binding.pry 
   end
@@ -36,7 +36,10 @@ class InteractiveRecord
   end 
   
   def values_for_insert
-    
+    values=[]
+    self.class.column_names.each do |name|
+      binding.pry
+    end 
   end 
   
   
