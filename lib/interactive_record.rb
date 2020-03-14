@@ -73,7 +73,7 @@ class InteractiveRecord
     SQL
     
     attribute.each do |key, value|
-      keys = key 
+      keys = key.to_s
       values = value
     end 
     binding.pry 
