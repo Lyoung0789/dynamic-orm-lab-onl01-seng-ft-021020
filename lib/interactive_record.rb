@@ -71,10 +71,12 @@ class InteractiveRecord
       WHERE ? = ?
     SQL
     
+    keys = attribute.keys.join
+    values = attribute.values
     
   
   
-    DB[:conn].execute(sql, attribute.keys.join(), attribute.values)
+    DB[:conn].execute(sql, keys, values)
     
     
   end 
