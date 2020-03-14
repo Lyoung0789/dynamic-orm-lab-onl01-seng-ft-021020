@@ -40,7 +40,7 @@ class InteractiveRecord
     self.class.column_names.each do |name|
       values << "'#{send(name)}'" unless send(name).nil?
     end 
-    values.join(", ")
+    values.join(",")
     
   end 
   
