@@ -76,7 +76,7 @@ class InteractiveRecord
     
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE ? = ? 
+      WHERE ? => ? 
     SQL
     
     binding.pry 
