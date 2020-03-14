@@ -68,15 +68,15 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE ? = "?"
+      WHERE #{attribute.keys.join} = "#{attribute.values.join}"
     SQL
     
-    keys = attribute.keys.join
-    values = attribute.values.join
+    # keys = attribute.keys.join
+    # values = attribute.values.join
     
     binding.pry
   
-    DB[:conn].execute(sql, keys, values)
+    DB[:conn].execute(sql)
     
     
   end 
