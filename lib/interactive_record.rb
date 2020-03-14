@@ -65,18 +65,10 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
-    keys = ""
-    values =""
-  
-    
-    attribute.each do |key, value|
-      keys = key.to_s
-      values = value
-    end 
-    
+   
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE #{self.table_name}.#{keys} = #{values} 
+      WHERE #{attribute.keys} = #{attribute.values} 
     SQL
     
     binding.pry 
