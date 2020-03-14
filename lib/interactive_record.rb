@@ -68,12 +68,12 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE #{attribute.keys}.flatten = #{attribute.values} 
+      WHERE ? = ?
     SQL
     
     binding.pry 
   
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, #{attribute.keys}.flatten, #{attribute.values}.flatten)
     
     
   end 
