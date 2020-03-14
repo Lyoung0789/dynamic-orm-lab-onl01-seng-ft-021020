@@ -68,7 +68,7 @@ class InteractiveRecord
    
     sql= <<-SQL
       SELECT * from #{self.table_name}
-      WHERE #{attribute.keys}[0]= #{attribute.values}[0]
+      WHERE #{attribute.keys}[0] = #{attribute.values}[0]
     SQL
     
   # binding.pry
