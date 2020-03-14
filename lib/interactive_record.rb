@@ -64,7 +64,12 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end 
   
-  def self.find_by
+  def self.find_by(attribute)
+    sql= <<-SQL
+      SELECT * from #{self.table_name}
+      WHERE attribute
+    SQL
+    binding.pry 
     
   end 
   
